@@ -1,0 +1,14 @@
+{
+  "name": "front-end",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-strapi": "^0.2.0",
+    "axios": "^1.3.4",
+    "gridsome": "^0.7.0"
+  }
+}
