@@ -31,7 +31,7 @@ WORKDIR /app/strapi
 RUN yarn install
 RUN yarn build
 
-CMD sh -c 'yarn start /app/strapi & nginx -g "daemon off;"' --user nginx:nginx
+CMD sh -c 'yarn start /app/strapi & nginx -g "daemon off;"'
 
 # Expose ports for Nginx and Strapi
 EXPOSE 3000
