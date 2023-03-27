@@ -1,0 +1,4 @@
+strapi/node_modules/
+strapi/build
+front-end/node_modules/
+front-end/dist

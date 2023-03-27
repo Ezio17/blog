@@ -4,7 +4,7 @@ module.exports = function (api) {
   api.loadSource(async ({ addCollection }) => {
     const collection = addCollection('Post')
 
-    const { data: { data } } = await axios.get(`${process.env.DOMAIN}/api/posts?populate=*`);
+    const { data: { data } } = await axios.get(`https://blog-ujed.onrender.com/api/posts?populate=*`);
     
     for (post of data) {
       console.log(post);
