@@ -2,6 +2,7 @@
   <Layout>
     <p>{{ $page.post.id }}</p>
     <p>{{ $page.post.attributes.Title }}</p>
+    <p>{{ $page.post.attributes.Description }}</p>
   </Layout>
 </template>
 
@@ -11,6 +12,7 @@ query Post ($id: ID!) {
     id
     attributes {
         Title
+        Description
       }
   }
 }
@@ -18,14 +20,19 @@ query Post ($id: ID!) {
 
 <script>
 export default {
-  metaInfo: {
-    title: 'Snaga solution - blog'
+  name: 'Post',
+  metaInfo() {
+    return {
+      title: this.$page.post.attributes.Title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.post.attributes.Description,
+        },
+      ],
+    };
   },
-
-  async mounted() {
-    const { id } = this.$route.params
-  }
-}
+};
 </script>
 
 <style>

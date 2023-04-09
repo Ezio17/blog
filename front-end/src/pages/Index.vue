@@ -1,11 +1,12 @@
 <template>
   <Layout>
     <h1>Snaga solutions</h1>
-    <div class="posts" v-for="post of $page.posts.edges" :key="post.id">
+    <div v-for="post of $page.posts.edges" :key="post.id" class="posts">
       <h3>
         <g-link :to="`/post/${post.node.id}`">
           {{ post.node.attributes.Title }}
         </g-link>
+        <g-image />
       </h3>
     </div>
   </Layout>
@@ -29,7 +30,7 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: "Snaga solution - blog",
+    title: 'Snaga solution - blog',
   },
 };
 </script>
