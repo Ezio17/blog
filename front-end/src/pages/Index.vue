@@ -27,14 +27,6 @@ query {
 }
 </page-query>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Snaga solution - blog',
-  },
-};
-</script>
-
 <style>
 a {
   margin-right: 1rem;
