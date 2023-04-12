@@ -6,7 +6,22 @@
 
 module.exports = {
   siteName: 'Snaga solutions',
-  plugins: [],
+  siteUrl: process.env.SITE_URL || 'https://blog.snaga-solutions.online/',
+  plugins: [{
+    use: '@gridsome/plugin-sitemap',
+    options: {
+      config: {
+        '/': {
+          changefreq: 'weekly',
+          priority: 0.8,
+        },
+        '/posts/*': {
+          changefreq: 'weekly',
+          priority: 1.0,
+        },
+      }
+    }
+  }],
   templates: {
     Post: [
       {
