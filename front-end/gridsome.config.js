@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Snaga solutions',
   siteUrl: process.env.SITE_URL || 'https://blog.snaga-solutions.online/',
+  siteDescription: 'Snaga solutions blog',
   plugins: [{
     use: '@gridsome/plugin-sitemap',
     options: {

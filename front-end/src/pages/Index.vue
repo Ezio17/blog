@@ -2,12 +2,11 @@
   <Layout>
     <h1>Snaga solutions</h1>
     <div v-for="post of $page.posts.edges" :key="post.id" class="posts">
-      <h3>
+      <h2>
         <g-link :to="`/post/${post.node.id}`">
           {{ post.node.attributes.Title }}
         </g-link>
-        <g-image />
-      </h3>
+      </h2>
     </div>
   </Layout>
 </template>
@@ -26,6 +25,19 @@ query {
   }
 }
 </page-query>
+
+<script>
+export default {
+  metaInfo: {
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://blog.snaga-solutions.online/',
+      },
+    ],
+  },
+};
+</script>
 
 <style>
 a {
