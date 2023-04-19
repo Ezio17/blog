@@ -8,21 +8,23 @@ module.exports = {
   siteName: 'Snaga solutions',
   siteUrl: process.env.SITE_URL || 'https://blog.snaga-solutions.online/',
   siteDescription: 'Snaga solutions blog',
-  plugins: [{
-    use: '@gridsome/plugin-sitemap',
-    options: {
-      config: {
-        '/': {
-          changefreq: 'weekly',
-          priority: 0.8,
+  plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        config: {
+          '/': {
+            changefreq: 'weekly',
+            priority: 1.0,
+          },
+          '/posts/*': {
+            changefreq: 'weekly',
+            priority: 1.0,
+          },
         },
-        '/posts/*': {
-          changefreq: 'weekly',
-          priority: 1.0,
-        },
-      }
-    }
-  }],
+      },
+    },
+  ],
   templates: {
     Post: [
       {
