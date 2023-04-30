@@ -31,6 +31,12 @@ jobs:
           directory: ./front-end
           file_name: .env
           fail_on_empty: false
+      
+      - name: Read
+        run: |
+          cd ./front-end
+          cat .env
+          cat package.json
 
       - name: Deploy to Cloud Run
         id: deploy
