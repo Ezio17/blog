@@ -29,6 +29,15 @@ export default {
     },
   },
 
+  mounted() {
+    window.gtag('event', 'page_view', {
+      page_title: this.title,
+      page_location: window.location.href,
+      page_path: this.$route.path,
+      send_to: process.env.GRIDSOME_GOOGLE_ANALYTIC_ID,
+    });
+  },
+
   metaInfo: {
     meta: [
       { charset: 'utf-8' },
